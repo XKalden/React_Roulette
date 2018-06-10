@@ -1,0 +1,64 @@
+
+.table__div{
+    text-align: center;
+}
+
+
+table{
+    padding: 20px;
+   background-color: rgba(167, 252, 146,0.4);
+   border-radius: 50px;
+}
+
+tr{
+    
+    border: 1px solid black;
+
+}
+
+td{
+    padding: 20px;
+    border: 1px solid blue;
+    border-radius: 40px;
+    width:20px;
+    font-size: 1.2em;
+    color: white;
+}
+
+td:hover{
+    background-color:rgb(239, 242, 77);
+    color:black;
+    
+}
+
+.empty__td{
+    visibility: hidden;
+    border: none;
+}
+
+.ChangeW{
+    width: 100px;
+}
+
+.red{
+    background-color:rgb(255, 28, 58);
+}
+
+.black{
+    background-color: rgb(76, 74, 75);
+}
+
+.green{
+    background-color:rgb(9, 193, 61);
+}
+
+.blue{
+    background-color:rgb(20, 210, 232);
+}
+
+.peach{
+    background-color:rgb(57, 130, 214);
+}
+
+
+
