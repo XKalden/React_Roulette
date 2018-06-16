@@ -2,15 +2,17 @@ import React, { Component } from 'react'
 
 import { connect } from 'react-redux';
 
+import "./display.css";
 
 class Display extends Component{
 
     render(){
-        return(
-            <div>
 
+        console.log(this.props.luckyNumber);
+        return(
+            <div className="display__div">
                 <h1>My Chosen Number </h1>
-                {this.props.luckyNumber}
+                { (this.props.luckyNumber <=0 || this.props.luckyNumber)? this.props.luckyNumber : "Please Select"}
 
             </div>
         )
