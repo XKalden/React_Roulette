@@ -3,6 +3,7 @@ import * as actionType from '../actions/actionTypes';
 
 const initailState = {
     inputNumber : null,
+    roleNumber : null
 
 }
 
@@ -17,6 +18,12 @@ const reducer = (state=initailState, action) => {
                 inputNumber: action.payload
 
             }
+        case(actionType.GET_ROLE_NUMBER):
+            return{
+                ...state,
+                roleNumber: action.roleNumber
+            }
+
         default:
             return state;
 

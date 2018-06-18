@@ -10,9 +10,34 @@ class RoulettTable extends Component {
 
     } 
 
+    winningRolleNumber = () => {
+
+        console.log("-------randomNumber -------")
+        let roleNumber = 0;
+        roleNumber = Math.floor(Math.random() * 36 );
+        console.log(`-------randomNumber ${roleNumber} --------`);
+        
+        // Redux State 
+        this.props.roleNumber(roleNumber);
+        
+        return roleNumber;
+    }
+
+
+    
+
     tableClicked = (e) => {
-        this.setState({number:e}) 
+        console.log("click once")
+        let winningRole = this.winningRolleNumber();
+        console.log("winning role " + winningRole);
+
+        let chosenNumber = e;
+        this.setState({
+            number: chosenNumber
+        })
+
         this.props.changeLuckyNumber(e);
+
     }
 
     render(){     
@@ -97,8 +122,8 @@ class RoulettTable extends Component {
 const mayDispatchtoProps = (dispatch) => {
     
     return {
-        changeLuckyNumber: (number) => dispatch(actions.changeLuckyNumber(number)) 
-
+        changeLuckyNumber: (number) => dispatch(actions.changeLuckyNumber(number)),
+        roleNumber: (number) => dispatch(actions.roleNumber(number))
     }
 
 

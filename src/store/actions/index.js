@@ -2,5 +2,6 @@
 
 
 export {
-    changeLuckyNumber
+    changeLuckyNumber,
+    roleNumber
 } from './inputNumber.js';

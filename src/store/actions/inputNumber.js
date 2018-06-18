@@ -9,6 +9,14 @@ export const changeLuckyNumber = (number) => {
 }
 
 
+export const roleNumber = (number) => {
+    return {
+        type: actiontype.GET_ROLE_NUMBER,
+        roleNumber: number
+    }
+}
+
+
 
 
 
